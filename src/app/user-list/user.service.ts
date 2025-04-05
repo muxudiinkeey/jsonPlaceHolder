@@ -7,8 +7,18 @@ import { Iuser } from './user';
   providedIn: 'root'
 })
 export class UserService {
-  
+  private apiUrl = 'https://jsonplaceholder.typicode.com/users'
+http = inject (HttpClient);
+getUsers(){
+return this.http.get<Iuser[]>(this.apiUrl);
+}
+getUser(){
+return this.http.get<Iuser[]>(`${this.apiUrl}/${2}` );
+}
+}
 
+/* 
+nooca koowaad
   constructor(private http:HttpClient){}
   
 
@@ -17,5 +27,4 @@ export class UserService {
   }
   getUser(): Observable<Iuser>{
     return this.http.get<Iuser>('https://jsonplaceholder.typicode.com/users/1');
-  }
-}
+  } */
