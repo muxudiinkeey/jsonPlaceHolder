@@ -9,11 +9,14 @@ import { Iuser } from './user';
 export class UserService {
   private apiUrl = 'https://jsonplaceholder.typicode.com/users'
 http = inject (HttpClient);
-getUsers(){
+getUsers():Observable<Iuser[]>{
 return this.http.get<Iuser[]>(this.apiUrl);
 }
-getUser(){
-return this.http.get<Iuser[]>(`${this.apiUrl}/${2}` );
+getUser():Observable<Iuser>{
+return this.http.get<Iuser>(`${this.apiUrl}/${2}` );
+}
+CreateUser(user: Iuser):Observable<Iuser>{
+return this.http.get<Iuser>(`${this.apiUrl}/${2}` );
 }
 }
 

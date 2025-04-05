@@ -25,7 +25,13 @@ onGetUsers(){
 }
 onGetUser(){
   this.userService.getUser().subscribe((response=>{
-    this.users = response;
+    this.users = this.users;
+    console.log(response)
+  }))
+}
+onCreateUser(){
+  this.userService.getUser().subscribe((response=>{
+    this.users = this.users;
     console.log(response)
   }))
 }
