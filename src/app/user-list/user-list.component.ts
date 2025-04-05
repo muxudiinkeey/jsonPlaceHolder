@@ -39,23 +39,47 @@ private user: Iuser={
 ngOnInit(): void {
   this.onGetUsers();
   //this.onGetUser();
-  this.onCreateUser();
+  //  this.onCreateUser();
+  //this.onUpdateUser();
+  //this.onPatchUser();
+  //this.onDeleteUser();
+
 }
 
 onGetUsers(){
   this.userService.getUsers().subscribe((response=>{
     this.users = response;
-    console.log(response)
+    console.log(response  )
   }))
 }
 onGetUser(){
   this.userService.getUser().subscribe((response=>{
     this.users = this.users;
     console.log(response)
+  
   }))
 }
 onCreateUser(){
   this.userService.CreateUser(this.user).subscribe((response=>{
+    this.users = this.users;
+    console.log(response)
+    
+  }))
+}
+onUpdateUser(){
+  this.userService.updateUser(this.user).subscribe((response=>{
+    this.users = this.users;
+    console.log(response)
+  }))
+}
+onPatchUser(){
+  this.userService.updateUser(this.user).subscribe((response=>{
+    this.users = this.users;
+    console.log(response)
+  }))
+}
+onDeleteUser(){
+  this.userService.deleteUser(5).subscribe((response=>{
     this.users = this.users;
     console.log(response)
   }))
