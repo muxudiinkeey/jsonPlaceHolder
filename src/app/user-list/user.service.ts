@@ -16,7 +16,7 @@ getUser():Observable<Iuser>{
 return this.http.get<Iuser>(`${this.apiUrl}/${2}` );
 }
 CreateUser(user: Iuser):Observable<Iuser>{
-return this.http.get<Iuser>(`${this.apiUrl}/${2}` );
+return this.http.post<Iuser>(`${this.apiUrl}/${2}`, {} );
 }
 }
 
