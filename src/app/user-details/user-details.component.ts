@@ -13,7 +13,7 @@ export class UserDetailsComponent implements OnInit{
 users: Iuser[]=[];
 userService = inject(UserService);
 activateRoute = inject (ActivatedRoute)
-user: Iuser[]=[];
+user: any[]=[];
 ngOnInit(): void {
     this.onGetUser();
 }
