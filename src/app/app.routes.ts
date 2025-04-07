@@ -6,8 +6,8 @@ import { UserRegisterComponent } from './user-register/user-register.component';
 
 export const routes: Routes = [
     { path: '', pathMatch: 'full', redirectTo: 'userList' },
-    { path: 'userDetails', component: UserDetailsComponent },
     { path: 'userList', component: UserListComponent},
+    { path: 'userDetails/:id', component: UserDetailsComponent },
     { path: 'userRegister', component: UserRegisterComponent},
     { path: '**', component: PageNotFoundComponent},
 ];

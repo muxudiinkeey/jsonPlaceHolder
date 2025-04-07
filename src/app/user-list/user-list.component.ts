@@ -13,31 +13,9 @@ export class UserListComponent implements OnInit{
 userService = inject (UserService);
 users: Iuser[]=[]
 
-private user: Iuser={
-    
-  'name': 'Axmed',
-  'username': 'Calasow',
-  'email': 'Sincere@april.biz',
-  'address': {
-    'street': 'Kulas Light',
-    'suite': 'Apt. 556',
-    'city': 'Gwenborough',
-    'zipcode': '92998-3874',
-    'geo': {
-      'lat': '-37.3159',
-      'lng': '81.1496'
-    }
-  },
-  'phone': '1-770-736-8031 x56442',
-  'website': 'hildegard.org',
-  'company': {
-    'name': 'Romaguera-Crona',
-    'catchPhrase': 'Multi-layered client-server neural-net',
-    'bs': 'harness real-time e-markets'
-  }
-}
+
 ngOnInit(): void {
-  this.onGetUsers();
+ this.onGetUsers();
   //this.onGetUser();
   //  this.onCreateUser();
   //this.onUpdateUser();
@@ -52,21 +30,22 @@ onGetUsers(){
     console.log(response  )
   }))
 }
-onGetUser(){
+}
+/* onGetUser(){
   this.userService.getUser().subscribe((response=>{
     this.users = this.users;
     console.log(response)
   
   }))
-}
-onCreateUser(){
+} */
+/* onCreateUser(){
   this.userService.CreateUser(this.user).subscribe((response=>{
     this.users = this.users;
     console.log(response)
     
   }))
-}
-onUpdateUser(){
+} */
+/* onUpdateUser(){
   this.userService.updateUser(this.user).subscribe((response=>{
     this.users = this.users;
     console.log(response)
@@ -83,8 +62,8 @@ onDeleteUser(){
     this.users = this.users;
     console.log(response)
   }))
-}
-}
+} */
+
 /*
 constructor(private userService: UserService){}
 ngOnInit(): void {

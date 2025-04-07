@@ -7,6 +7,7 @@ import { Iuser } from '../user';
   providedIn: 'root'
 })
 export class UserService {
+
   private apiUrl = 'https://jsonplaceholder.typicode.com/users'
 http = inject (HttpClient);
 /* getUsers():Observable<Iuser[]>{
@@ -21,6 +22,12 @@ return this.http.get<Iuser[]>(this.apiUrl)
 }
 
 getUser():Observable<Iuser>{
+  return this.http.get<Iuser>(`${this.apiUrl}/${2}` );
+  
+  }
+  
+
+/* getUser():Observable<Iuser>{
 return this.http.get<Iuser>(`${this.apiUrl}/${2}` );
 
 }
@@ -36,7 +43,7 @@ return this.http.patch<Iuser>(`${this.apiUrl}/${user.id}`, user );
 }
 deleteUser(id: number):Observable<unknown>{
 return this.http.delete<unknown>(`${this.apiUrl}/${id}`);
-}
+} */
 
 
 }
