@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { UserService } from './user.service';
-import { Iuser } from './user';
+import { Iuser } from '../user';
 import { HttpBackend, HttpClient } from '@angular/common/http';
 
 @Component({
